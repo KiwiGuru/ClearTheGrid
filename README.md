@@ -1,10 +1,19 @@
-# Clear The Grid code
+# Clear The Grid code, Solver and GUI
 
-You probably won't need any of the code, but... for the sake of completeness and transparency.
+This is the software used to solve the codecompetitions' puzzles. It contains parts of the original starterkit for level import and move validation and creation, and a completely new application using a genetic algoritm, a Database for storage of solutions and settings/parameters and a display/graph for performance review.
 
-Here you will find the code used to generate to different levels. You can use it to generate other grids with the same level, but it's very very unlikely that you can generate the same levels again :-)
+!!!IMPORTANT!!!
 
-The Generator project is used for the leve generation.
-The Shared project is , well, a shared code base of the maps, solutions, and other constructs we used.
-The Checker project might actual be usefull, because it can verify your solution file against a level file.  
+Before running the application, please ensure that the connectionString used in the DAL project is correct to be used with SQL Server.
 
+Example:
+optionsBuilder.UseSqlServer(@"Data Source=localhost\SqlExpress01;Trusted_Connection=True;TrustServerCertificate=True;Initial Catalog=ClearTheGridDB;");
+
+After this, it is possible to either build the database in the DAL as startup project using the NuGet package manager with:
+update-database
+
+Or restore the attached backup of the database using SQLManagement studio.
+
+Make sure the 'Levels' folder exists with the level subfolders containing the maps as supplied in the StarterKit.
+
+When the steps above are done, the program can be run using the GUI project as startup project

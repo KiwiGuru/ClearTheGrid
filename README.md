@@ -14,6 +14,7 @@ update-database
 
 Or restore the attached backup of the database using SQLManagement studio.
 
+In the bin folder after building:
 Make sure the 'Levels' folder exists with the level subfolders containing the maps as supplied in the StarterKit.
 
 When the steps above are done, the program can be run using the GUI project as startup project
